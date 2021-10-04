@@ -1,5 +1,5 @@
 const products = [{
-    _id: '1',
+   
     name: 'Iphone 13 pro',
     image: '/images/iphone13.jpg',
     description: 
@@ -12,7 +12,7 @@ const products = [{
     numReviews: 4,
 },
 {
-    _id: '2',
+   
     name: 'macbook pro',
     image: '/images/macbook.jpg',
     description: 
@@ -25,7 +25,7 @@ const products = [{
     numReviews: 4,
 },
 {
-    _id: '3',
+   
     name: 'airpods',
     image: '/images/airpods.jpg',
     description: 
@@ -38,7 +38,7 @@ const products = [{
     numReviews: 3,
 },
 {
-    _id: '4',
+    
     name: 'ipad',
     image: '/images/ipad.jpg',
     description: 
@@ -51,7 +51,7 @@ const products = [{
     numReviews: 2,
 },
 {
-    _id: '5',
+    
     name: 'imac',
     image: '/images/imac.jpg',
     description: 

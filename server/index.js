@@ -1,29 +1,28 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import cors from 'cors'
+
 const app = express()
-import products from './data/products.js'
 import connectDB from './config/db.js'
-
 dotenv.config()
+connectDB()
+app.use(cors())
 
-connectDB('')
 
+app.use(express.json())
 
-
+import productRoute from './routes/productRoutes.js'
+import { notFound, errorHandler } from './middleware/errorMiddleware.js'
 
 app.get('/',(req, res) => {
     res.send('API is running....')
 })
 
-app.get('/api/products', (req, res) => {
-    res.send(products)
-})
+app.use('/api/products', productRoute)
 
+app.use(notFound)
+app.use(errorHandler)
 
-app.get('/api/products/:id', (req, res) => {
-   const product = products.find(p => p._id === req.params.id)
-   res.json(product)
-})
 
 
 

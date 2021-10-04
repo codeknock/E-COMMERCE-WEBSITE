@@ -15,7 +15,7 @@ const reviewSchema = mongoose.Schema({
 const productSchema = mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        required: true
+        required: false,
     },
     name: {
         type: String,
@@ -23,7 +23,7 @@ const productSchema = mongoose.Schema({
     },
     image: {
         type: String,
-        required: true,
+        required: false,
     },
     brand: {
         type: String,
